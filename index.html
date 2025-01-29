@@ -6,12 +6,23 @@
     <title>Tile Flip Game</title>
     <style>
         body { text-align: center; font-family: Arial, sans-serif; }
-        .grid { display: grid; grid-template-columns: repeat(4, 100px); gap: 10px;  }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(80px, 1fr));
+            gap: 10px;
+            justify-content: center;
+            max-width: 90vw;
+            margin: auto;
+        }
         .tile { 
-            width: 100px; height: 100px; 
+            width: 100%; 
+            aspect-ratio: 1 / 1;
             background-color: gray; 
-            display: flex; align-items: center; justify-content: center; 
-            font-size: 2em; cursor: pointer; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            font-size: 2em; 
+            cursor: pointer; 
             transition: transform 0.5s; 
             transform: rotateY(0deg);
         }
